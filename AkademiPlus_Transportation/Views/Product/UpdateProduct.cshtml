@@ -1,0 +1,26 @@
+﻿@model AkademiPlus_Transportation.Models.TblProduct
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Ürün Güncelleme Sayfası</h2>
+<br />
+<form method="post">
+
+    <label>Ürün ID</label>
+    @Html.TextBoxFor(x=>x.ProductID, new { @class="form-control"})
+    <br />
+    <label>Ürün ADI</label>
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    <br />
+    <label>Ürün ADI</label>
+    @Html.TextBoxFor(x => x.ProductSize, new { @class = "form-control" })
+    <br />
+    <label>Ürün Detayları</label>
+    @Html.TextAreaFor(x => x.ProductDescription, 5,2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-default">Ürünü Güncelle</button>
+
+</form>
+

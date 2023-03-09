@@ -1,0 +1,140 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Transpolar - Transportation| İletişim :: W3layouts </title>
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Templates/Transpolar-Starter/assets/css/style-starter.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--/Header-->
+    @Html.Action("PartialHeader")
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title mt-lg-5 mt-4">
+                            Bize Ulaşın
+                        </h2>
+
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="/MainPage/Index/">Anasayfa</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> İletişim</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!-- contacts-5-grid -->
+    @Html.Action("PartialContact2")
+
+    <div class="contacts-sub-5">
+        <div class="contacts-mapw3 position-relative">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6119.648560402154!2d32.84680067663656!3d39.922948417702116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34effd6b9930b%3A0x6fa79cbeeeec0bac!2zS8SxesSxbGF5LCAwNjQyMCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1678312088441!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" style="border:0" allowfullscreen></iframe>
+            <div class="map-content-5">
+                <h4 class="title-w3l-adinf mb-3">Adres Bilgileri</h4>
+                <div class="address-grid">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Ankara - Kızılay</p>
+                </div>
+                <div class="address-grid my-2">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:mail@example.com" class="link1">mail@example.com</a></p>
+
+                </div>
+                <div class="address-grid">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><a href="tel:+12 324-016-695" class="link1">+12 324-016-695</a></p>
+                </div>
+                <div class="address-grid my-2">
+                    <i class="far fa-clock"></i>
+                    <p>Pazartesi - Cuma: 9:00 - 19:00</p>
+                </div>
+                <div class="address-grid">
+                    <p>Hafta Sonları Kapalıyız..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/footer-9-->
+    @Html.Action("PartialFooter")
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    <script src="~/Templates/Transpolar-Starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/theme-change.js"></script>
+    <!--/search-->
+    <script src="~/Templates/Transpolar-Starter/assets/js/modernizr.custom.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/classie.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/demo1.js"></script>
+    <!--//search-->
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="~/Templates/Transpolar-Starter/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+

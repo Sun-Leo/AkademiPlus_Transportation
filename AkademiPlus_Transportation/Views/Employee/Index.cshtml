@@ -1,0 +1,37 @@
+﻿@model List<AkademiPlus_Transportation.Models.TblEmployee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<h2>Personel Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th style="background-color:cadetblue">#</th>
+        <th style="background-color:cadetblue">Personel GÖRSEL:</th>
+        <th style="background-color:cadetblue">Personel ADI:</th>
+        <th style="background-color:cadetblue">Personel SOYADI:</th>
+        <th style="background-color:cadetblue">Personel AÇIKLAMASI</th>
+        <th style="background-color:cadetblue">SİL</th>
+        <th style="background-color:cadetblue">GÜNCELLE</th>
+    </tr>>
+    @foreach (var item in Model)
+    {
+        sayac++;
+        <tr>
+            <td>@sayac</td>
+            <td><img src="@item.Employeeimage" style="width:80px;height:50px" /></td>
+            <td>@item.EmployeeName</td>
+            <td>@item.EmployeeSurname</td>
+            <td>@item.EmployeeDescription</td>
+            <td><a href="#" class="btn btn-default">Sil</a></td>
+            <td><a href="/Employee/UpdateEmployee/@item.EmployeeID" class="btn btn-default">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Employee/AddEmployee/" class="btn btn-default"> Yeni Personel Ekle</a>
+

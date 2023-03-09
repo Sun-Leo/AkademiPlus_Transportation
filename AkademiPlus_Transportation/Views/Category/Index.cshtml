@@ -1,0 +1,31 @@
+﻿@model List<AkademiPlus_Transportation.Models.TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th style="background-color:cadetblue">#</th>
+        <th style="background-color:cadetblue">Kategori Adı</th>
+        <th style="background-color:cadetblue">Sil</th>
+        <th style="background-color:cadetblue">Güncelle</th>
+        <th style="background-color:cadetblue">Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-default">Sil</a></td>
+            <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-default">Güncelle</a></td>
+            <td><a href="#" class="btn btn-default">Detaylar</a></td>
+        </tr>
+    }
+    
+</table>
+<a href="/Category/AddCategory/" class="btn btn-default">Yeni Kategori Girişi</a>
+
+

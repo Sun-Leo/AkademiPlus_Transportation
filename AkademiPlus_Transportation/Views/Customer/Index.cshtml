@@ -1,0 +1,34 @@
+﻿@model List<AkademiPlus_Transportation.Models.TblCustomer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<h2>Müşteri</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th style="background-color:cadetblue">#</th>
+        <th style="background-color:cadetblue">Müşteri ADI:</th>
+        <th style="background-color:cadetblue">Müşteri SOYADI:</th>
+        <th style="background-color:cadetblue">ŞEHİR:</th>
+        <th style="background-color:cadetblue">SİL</th>
+        <th style="background-color:cadetblue">GÜNCELLE</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+        sayac++;
+        <tr>
+            <td>@sayac</td>
+            <td>@item.CustomerName</td>
+            <td>@item.CustomerSurname</td>
+            <td>@item.CustomerCity</td>
+            <td><a href="/Customer/DeleteCustomer/@item.CustomerID" class="btn btn-default">Sil</a></td>
+            <td><a href="/Customer/UpdateCustomer/@item.CustomerID" class="btn btn-default">Güncelle</a></td>
+        </tr>
+
+            }
+
+</table>
+<a href="/Customer/AddCustomer/" class="btn btn-default"> Yeni Müşteri Girişi</a>

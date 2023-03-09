@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHeader")
+<body>
+    <!--/Header-->
+    @Html.Action("PartialNavbar")
+    <!--//Header-->
+    <!--/Banner-Start-->
+    <!-- main-slider -->
+    @Html.Action("PartialSlider")
+    <!-- //main-slider -->
+    <!--/grids-->
+    @Html.Action("PartialAbout")
+    <!--//grids-->
+    <!--/w3-grids-->
+    @Html.Action("PartialDetail")
+    <!--//w3-grids-->
+    <!--/video-->
+    @Html.Action("PartialMap")
+    <!--//video-->
+    <!-- features section -->
+    @Html.Action("PartialServices")
+    <!--//features section -->
+    <!--/w3l-grids-->
+    @Html.Action("PartialGallery")
+    <!--//w3l-grids-->
+    <!--/testimonials-->
+    @Html.Action("PartialTestimonial")
+    <!--//testimonials-->
+    <!--/w3l-newsletter-->
+    @Html.Action("PartialSubscribe")
+    <!--//w3l-newsletter-->
+    <!--/footer-9-->
+    <footer class="w3l-footer9">
+        @Html.Action("PartialFooter")
+
+        <!-- Js scripts -->
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    @Html.Action("PartialScript")
+</body>
+
+</html>

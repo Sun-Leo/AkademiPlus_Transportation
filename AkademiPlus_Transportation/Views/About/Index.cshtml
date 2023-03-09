@@ -1,0 +1,158 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHead")
+
+<body>
+    <!--/Header-->
+    @Html.Action("PartialHeader")
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title mt-lg-5 mt-4">
+                            Hakkımızda
+                        </h2>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="/MainPage/Index/">Anasayfa</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Hakkımızda</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!--/about-page-->
+    @Html.Action("PartialAboutPage")
+    <!--//about-page-->
+    <!--/w3-grids-->
+    <section class="w3l-stats-section py-5 pt-0" id="stats">
+        <div class="container py-md-5 pt-0">
+            <div class="w3l-stats-inner-inf">
+                <div class="row stats-con">
+                    <div class="col-lg-3 col-6 stats_info counter_grid">
+                        <p class="counter">2500 </p>
+                        <h3>Teslim Edilen Ürünler</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid">
+                        <p class="counter">1500 </p>
+                        <h3>Katedilen Mil</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-4">
+                        <p class="counter">1280 </p>
+                        <h3>İş Başarısı</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-4">
+                        <p class="counter">3020</p>
+                        <h3>Mutlu Müşteriler</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//w3-grids-->
+    <!--/w3l-join-main-->
+    <section class="w3l-join-main py-5">
+        <div class="container py-md-5">
+            <div class="w3l-project-in">
+                <div class="row bottom-info text-left">
+                    <div class="col-lg-7 w3l-project-in-left pe-lg-5">
+                        <h6 class="title-subw3hny mb-2">Ücretsiz Tahmin Alın</h6>
+                        <h3 class="title-w3l two mb-2">
+                            Dünyadaki Herhangi Bir Varış Noktasına Açılan Kapınız..
+                        </h3>
+
+
+                    </div>
+                    <div class="col-lg-5 w3l-project-in-right">
+                        <div class="w3banner-content-btns">
+                            <a href="about.html" class="btn btn-style btn-white mt-4">Devamını Oku </a>
+                            <a href="contact.html" class="btn btn-style btn-primary mt-4 ms-3">Bize Ulaşın</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//w3l-join-main-->
+    <!--/team-sec-->
+    @Html.Action("PartialTeam")
+    <!--//team-sec-->
+    <!--/faq-section-->
+    @Html.Action("PartialQuestions")
+    <!-- //faq-section -->
+    <!--/footer-9-->
+    @Html.Action("PartialFooter")
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    <script src="~/Templates/Transpolar-Starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/theme-change.js"></script>
+    <!--/search-->
+    <script src="~/Templates/Transpolar-Starter/assets/js/modernizr.custom.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/classie.js"></script>
+    <script src="~/Templates/Transpolar-Starter/assets/js/demo1.js"></script>
+    <!--//search-->
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="~/Templates/Transpolar-Starter/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
